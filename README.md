@@ -66,7 +66,7 @@ Following metric are used to check the performance of a classification problem: 
 
 <h2> 📋 Documents </h2>
 <ul>
-   <li><p>High Level Document(HLD) for Yes bank closing price prediction : <a href="https://docs.google.com/document/d/1_igAZ0sWDZghSHzNDNSzs2a_rCk7MlH1/edit?usp=drive_link&ouid=109337113827293771758&rtpof=true&sd=true"> Word Document </a>. </p>
+   <li><p>High Level Document(HLD) for Mobile Price Range Prediction : <a href="https://docs.google.com/document/d/1_igAZ0sWDZghSHzNDNSzs2a_rCk7MlH1/edit?usp=drive_link&ouid=109337113827293771758&rtpof=true&sd=true"> Word Document </a>. </p>
 </li>
 </ul>
 <h2> 📔 Summary : </h2>
