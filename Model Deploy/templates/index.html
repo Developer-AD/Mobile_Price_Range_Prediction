@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppName</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='/css/style.css')}}"
+    />
+  </head>
+  <body style="overflow: hidden;">
+    <header>
+      <nav-bar>
+        <div class="menu">
+          <a class="effect" href="/"> Home </a>
+          <a class="effect" href="/about"> About </a>
+          <a
+            class="effect"
+            href="https://github.com/Developer-AD/Mobile_Price_Range_Prediction"
+            target="_blank"
+          >
+            CODE
+          </a>
+        </div>
+      </nav-bar>
+    </header>
+    <main>
+      <div class="header">
+        <h1>Mobile Price Range Prediction</h1>
+      </div>
+
+      <div class="input-form">
+        <form method="POST" action="{{url_for('predict')}}">
+          <label for="battery_power">Batter Power :</label>
+          <input
+            type="number"
+            id="battery_power"
+            name="battery_power"
+            required placeholder=" Integer "
+          /><br />
+
+          <label for="clock_speed">Clock Speed :</label>
+          <input
+            type="text"
+            id="clock_speed"
+            name="clock_speed"
+            required placeholder=" Float "
+          /><br />
+
+          <label for="fc">Front Camera :</label>
+          <input type="number" id="fc" name="fc" required placeholder=" Integer " /><br />
+
+          <label for="int_memory">Internal Memory :</label>
+          <input
+            type="number"
+            id="int_memory"
+            name="int_memory"
+            required placeholder=" Integer "
+          /><br />
+
+          <label for="m_dep" >Mobile Depth :</label>
+          <input type="text" id="m_dep" name="m_dep" required placeholder=" Float " /><br />
+
+          <label for="mobile_wt">Mobile Weight :</label>
+          <input type="number" id="mobile_wt" name="mobile_wt" required placeholder=" Integer " /><br />
+
+          <label for="n_cores">Processor Cores :</label>
+          <input type="number" id="n_cores" name="n_cores" required placeholder=" Integer " /><br />
+
+          <label for="pc">Primary Camera :</label>
+          <input type="number" id="pc" name="pc" required placeholder=" Integer " /><br />
+
+          <label for="px_height">Pixel Height :</label>
+          <input type="number" id="px_height" name="px_height" required placeholder=" Integer " /><br />
+
+          <label for="px_width">Pixel Width :</label>
+          <input type="number" id="px_width" name="px_width" required placeholder=" Integer " /><br />
+
+          <label for="ram">RAM Memory:</label>
+          <input type="number" id="ram" name="ram" required placeholder=" Integer " /><br />
+
+          <label for="sc_h">Screen Height :</label>
+          <input type="number" id="sc_h" name="sc_h" required placeholder=" Integer " /><br />
+
+          <label for="sc_w">Scheen Width :</label>
+          <input type="number" id="sc_w" name="sc_w" required placeholder=" Integer " /><br />
+
+          <label for="talk_time">Talk Time :</label>
+          <input type="number" id="talk_time" name="talk_time" required placeholder=" Integer " /><br />
+
+          <!-- Radio Buttons -->
+          <label for="blue">Bluethooth</label>
+          <label><input type="radio" name="blue" value="1" required /> Yes</label>
+          <label><input type="radio" name="blue" value="0" /> No </label> <br />
+          <input type="radio" name="blue" value="hidden" style="display:none" required>
+
+          <label for="dual_sim">Dual Sim</label>
+          <label><input type="radio" name="dual_sim" value="1" required /> Yes </label> 
+          <label><input type="radio" name="dual_sim" value="0" /> No </label> 
+          <input type="radio" name="dual_sim" value="hidden" style="display:none" required>
+          <br />
+
+          <label for="four_g">4G Enable</label>
+          <label><input type="radio" name="four_g" value="1" required /> Yes </label> 
+          <label><input type="radio" name="four_g" value="0" /> No </label>
+          <input type="radio" name="four_g" value="hidden" style="display:none" required>
+          <br />
+
+          <label for="three_g">3G Enable</label>
+          <label><input type="radio" name="three_g" value="1" required /> Yes </label>
+          <label><input type="radio" name="three_g" value="0" /> No </label>
+          <input type="radio" name="three_g" value="hidden" style="display:none" required>
+          <br />
+
+          <label for="wifi">Wi-Fi</label>
+          <label><input type="radio" name="wifi" value="1" required /> Yes </label>
+          <label><input type="radio" name="wifi" value="0" /> No </label>
+          <input type="radio" name="wifi" value="hidden" style="display:none" required>
+
+          <br />
+          <label for="touch_screen">Touch Screen</label>
+          <label><input type="radio" name="touch_screen" value="1" required /> Yes </label>
+          <label><input type="radio" name="touch_screen" value="0" /> No </label>
+          <input type="radio" name="touch_screen" value="hidden" style="display:none" required>
+          <br />
+          <input id="submit" type="submit" value="Predict Price Range" />
+          
+          {% if name %}
+          <label id="output" for="touch_screen"> &#10159; {{name}}</label>
+          {% endif %}
+        </form>    
+    </main>
+  </body>
+</html>

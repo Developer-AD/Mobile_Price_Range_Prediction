@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppName</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Libre+Baskerville&family=Playball&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='/css/style.css')}}"
+    />
+  </head>
+  <body style="overflow-y: auto; overflow-x: hidden">
+    <header>
+      <nav-bar>
+        <div class="menu">
+          <a class="effect" href="/"> Home </a>
+          <a class="effect" href="/about"> About </a>
+          <a
+            class="effect"
+            href="https://github.com/Developer-AD/Mobile_Price_Range_Prediction"
+            target="_blank"
+          >
+            CODE
+          </a>
+        </div>
+      </nav-bar>
+    </header>
+    <main>
+      <section>
+        <h1 id="proj-name">Project Name - Mobile Price Range Prediction</h1>
+        <div class="overview">
+          <span class="heading">Project Summary :- </span>
+        </div>
+        <p>
+          In this project, we are going to explore and analyze a dataset which
+          contains specifications of two thousand mobile phones and try to
+          predict optimum price ranges for a list of mobile phones in the
+          market.During the purchase of mobile phones, various features like
+          memory, display, battery, camera, etc., are considered. People fail to
+          make correct decisions, due to the non-availability of necessary
+          resources to cross-validate the price. To address this issue, a
+          machine learning model is developed using the data related to the key
+          features of the mobile phone. The developed model is then used to
+          predict the price range of the new mobile phone.use the machine
+          learning algorithms namely Support Vector Machine (SVM), Random Forest
+          Classifier (RFC), Logistic Regression,Decission Tree,Naive Bayes
+          Theorm,K-nearest neighbors are used to train the model and predict the
+          output as low, medium, high or very high of price range.
+        </p>
+
+        <div class="overview">
+          <span class="heading">Business Problem overview :- </span>
+        </div>
+        <p>
+          In the competitive mobile phone market companies want to understand
+          sales data of mobile phones and factors which drive the prices. The
+          objective is to find out some relation between features of a mobile
+          phoneleg - RAM Internal Memory, etc and its selling price in this
+          problem, we do not have to predict the actual price but a price range
+          indicating how high the price is ?
+          <br />
+          AIM :- In this Project,On the basis of the mobile Specification like
+          Battery power, 3G enabled , wifi ,Bluetooth, Ram etc we are predicting
+          Price range of the mobile
+        </p>
+
+        <div class="overview">
+          <span class="heading">Variable Description :- </span>
+        </div>
+        <p>
+          1. Battery_power : Total energy a battery can store in one time
+          measured in mAh <br />
+          2. Blue : Has bluetooth or not<br />
+          3. Clock_speed : speed at which microprocessor executes
+          instructions<br />
+          4. Dual_sim : Has dual sim support or not<br />
+          5. Fc : Front Camera mega pixels<br />
+          6. Four_g : Has 4G or not<br />
+          7. Int_memory : Internal Memory in Gigabytes<br />
+          8. M_dep : Mobile Depth in cm<br />
+          9. Mobile_wt : Weight of mobile phone<br />
+          10. N_cores : Number of cores of processor<br />
+          11. Pc : Primary Camera mega pixels<br />
+          12. Px_height : Pixel Resolution Height<br />
+          13. Px_width : Pixel Resolution Width<br />
+          14. Ram : Random Access Memory in Mega<br />
+          15. Touch_screen : Has touch screen or not<br />
+          16. Sc_h : Screen Height of mobile in cm<br />
+          17. Sc_w : Screen Width of mobile in cm<br />
+          18. Talk_time : longest time that a single battery charge will last
+          when you are<br />
+          19. Three_g : Has 3G or not<br />
+          20. Wifi : Has wifi or not<br />
+          21. Price_range : This is the target variable with value of 0(low
+          cost), (medium cost),2(high cost) and 3(very high cost).
+        </p>
+
+        <div class="overview">
+          <span class="heading">Conclusion :- </span>
+        </div>
+        <p>
+          In project, we looked at classification. Classifiers represent the
+          intersection of advanced machine theory and practical application.
+          These algorithms are more than just a sorting mechanism for organising
+          unlabeled data instances into distinct groupings. Classifiers include
+          a unique set of dynamic rules that include an interpretation mechanism
+          for dealing with ambiguous or unknown values, all of which are suited
+          to the kind of inputs being analysed. Most classifiers also utilise
+          probability estimates, which enable end-users to adjust data
+          categorization using utility functions. <br />
+          1. From EDA we can see that here are mobile phones in 4 price ranges.
+          The number of elements is almost similar. <br />
+          2. half the devices have Bluetooth, and half don't. <br />
+          3. there is a gradual increase in battery as the price range
+          increases. <br />
+          4. Ram has continuous increase with price range while moving from Low
+          cost to Very high cost. 5. costly phones are lighter. <br />
+          6. RAM, battery power, pixels played more significant role in deciding
+          the price range of mobile phone. <br />
+          7. form all the above experiments we can conclude that XGboost
+          classifier and linear regression with using hyperparameters we got the
+          best results.
+        </p>
+        <br />
+        <center><p>---000---</p></center>
+      </section>
+    </main>
+  </body>
+</html>
